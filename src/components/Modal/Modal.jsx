@@ -2,14 +2,14 @@ import { Component } from 'react';
 
 export class Modal extends Component {
   componentDidMount() {
-    window.addEventListener('keydown', this.handleKeyDown);
+    window.addEventListener('keydown', this.handleKeyClose);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keydown', this.handleKeyDown);
+    window.removeEventListener('keydown', this.handleKeyClose);
   }
 
-  handleKeyDown = evt => {
+  handleKeyClose = evt => {
     if (evt.code === 'Escape') {
       this.props.onCloseModal();
     }
