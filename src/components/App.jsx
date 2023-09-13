@@ -77,7 +77,7 @@ export class App extends Component {
         )}
         <ImageGallery
           images={this.state.images}
-          onClick={this.handleOpenModal}
+          onClickOpen={this.handleOpenModal}
         />
         {this.state.notFound && (
           <div>`Sorry! There are no pictures ${this.state.query}!`</div>
