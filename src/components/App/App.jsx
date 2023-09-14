@@ -88,7 +88,7 @@ export class App extends Component {
         {this.state.showModal && (
           <Modal
             image={this.state.currentImg}
-            onCloseModal={this.state.handleCloseModal}
+            onCloseModal={this.handleCloseModal}
           />
         )}
       </AppDiv>
