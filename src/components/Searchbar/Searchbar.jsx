@@ -27,9 +27,7 @@ export class Searchbar extends Component {
     return (
       <SearchBarHead>
         <SearchForm onSubmit={this.handleSubmit}>
-          <SearchFormBtn type="submit">
-            <SearchFormBtnLabel>{<BsSearch size="18px" />}</SearchFormBtnLabel>
-          </SearchFormBtn>
+          <SearchFormBtn type="submit">Search</SearchFormBtn>
 
           <SearchFormInput
             type="text"
