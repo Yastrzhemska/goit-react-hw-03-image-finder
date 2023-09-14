@@ -1,10 +1,8 @@
 import { Component } from 'react';
-import { BsSearch } from 'react-icons/bs';
 
 import {
   SearchForm,
   SearchFormBtn,
-  SearchFormBtnLabel,
   SearchFormInput,
   SearchBarHead,
 } from './Searchbar.styled';
