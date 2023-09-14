@@ -1,12 +1,14 @@
 import { Component } from 'react';
 
-import { Searchbar } from './Searchbar/Searchbar';
-import { ImageGallery } from './ImageGallery/ImageGallery';
-import { Button } from './Button/Button';
-import { Loader } from './Loader/Loader';
-import { Modal } from './Modal/Modal';
+import { Searchbar } from '../Searchbar/Searchbar';
+import { ImageGallery } from '../ImageGallery/ImageGallery';
+import { Button } from '../Button/Button';
+import { Loader } from '../Loader/Loader';
+import { Modal } from '../Modal/Modal';
 
-import { fetchImages } from './api';
+import { fetchImages } from '../api';
+
+import { AppDiv } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -69,7 +71,7 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
+      <AppDiv>
         <Searchbar onSubmit={this.handleSubmit} />
         {this.state.loading && <Loader />}
         {this.state.error && !this.state.loading && (
@@ -89,7 +91,7 @@ export class App extends Component {
             onCloseModal={this.state.handleCloseModal}
           />
         )}
-      </div>
+      </AppDiv>
     );
   }
 }

@@ -1,11 +1,16 @@
+import {
+  ImageGalleryItems,
+  ImageGalleryItemsImg,
+} from './ImageGalleryItem.styled';
+
 export const ImageGalleryItem = ({ image, onClick }) => {
   return (
-    <li>
-      <img
+    <ImageGalleryItems>
+      <ImageGalleryItemsImg
         src={image.webformatURL}
         alt={image.tag}
         onClick={() => onClick(image)}
       />
-    </li>
+    </ImageGalleryItems>
   );
 };
